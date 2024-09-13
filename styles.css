@@ -1,0 +1,180 @@
+/* Basic reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3399ff; /* Blue background for the body */
+    color: #f1f1f1;
+    padding-top: 6px; /* For the fixed navbar */
+    position: relative; /* To position the ripple background */
+}
+
+/* Ripple Effect Background */
+.ripple-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind all other content */
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: white; /* White color for the ripple circles */
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9; /* Light blue shadow for depth */
+}
+
+.small {
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: -100px;
+    opacity: 0.2; /* Shade 1 */
+}
+
+.medium {
+    width: 400px;
+    height: 400px;
+    left: -200px;
+    bottom: -200px;
+    opacity: 0.5; /* Shade 2 */
+}
+
+.large {
+    width: 600px;
+    height: 600px;
+    left: -300px;
+    bottom: -300px;
+    opacity: 0.7; /* Shade 3 */
+}
+
+.xlarge {
+    width: 800px;
+    height: 800px;
+    left: -400px;
+    bottom: -400px;
+    opacity: 0.8; /* Shade 4 */
+}
+
+.xxlarge {
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    bottom: -500px;
+    opacity: 0.9; /* Shade 5 */
+}
+
+
+.shade1{
+    opacity: 0.2;
+  }
+  .shade2{
+    opacity: 0.5;
+  }
+  
+  .shade3{
+    opacity: 0.7;
+  }
+  
+  .shade4{
+    opacity: 0.8;
+  }
+  
+  .shade5{
+    opacity: 0.9;
+  }
+  
+@keyframes ripple {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+/* Navbar with curved edges */
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    width: 60%;
+    height: 50px;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: rgba(252, 251, 253, 0.9); /* Semi-transparent white */
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(247, 245, 245, 245);
+    padding: 10px 20px;
+    justify-content: space-evenly;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.s ease;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s, border-radius 0.3s;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #f8f7f3; /* Light text color on hover */
+    background-color:  #3399ff; /* Purple background on hover */
+    border-radius: 15px;
+}
+
+/* Scrolled state of the navbar */
+.navbar.scrolled {
+    background-color: #3399ff; /* Darker background when scrolled */
+    box-shadow: honeydew;
+}
+
+/* Section styling */
+section {
+    padding: 100px 30px;
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Sections stay above ripple background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        width: 80%;
+        padding: 10px;
+        top: 10px;
+        height: auto;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Ripple Effect</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ripple Background -->
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle medium shade4"></div>
+        <div class="circle small shade5"></div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <img src="https://skillcrafttech.com/images/logo-light.svg" alt="Company Logo" class="logo">
+        <a href="#home" data-title="Home"><i class="fas fa-home"></i></a>
+        <a href="#about" data-title="About"><i class="fas fa-user"></i></a>
+        <a href="#services" data-title="Services"><i class="fas fa-cogs"></i></a>
+        <a href="#contact" data-title="Contact"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- Home section -->
+    <section id="home">
+        <div class="loader"></div>
+        <h1>Welcome to the Home Page</h1>
+        <p>Content for the home page goes here.</p>
+    </section>
+
+    <!-- Other sections -->
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Content for the about us page goes here.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <p>Content for the services page goes here.</p>
+    </section>
+
+    <section id="contact">
+        <h1 >Contact Us</h1>
+        <p>Content for the contact page goes here.</p>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
